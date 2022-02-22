@@ -26,7 +26,7 @@ contract MultiSig {
     }
 
     modifier notApproved(uint _txId) {
-        require(approved[_txId][msg.sender] = false, "You already approved this transaction");
+        require(approved[_txId][msg.sender] == false, "You already approved this transaction");
         _;
     }
 
@@ -92,6 +92,7 @@ contract MultiSig {
         }
         return count;
     }
+
 
 
 }
